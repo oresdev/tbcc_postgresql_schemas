@@ -17,9 +17,9 @@
 }
 ```
 
-### ac_increase_counter()
+### ac_increase_value()
 
-[Source code](https://github.com/oresdev/tbcc_postgresql_schemas/tree/master/schemas/v3/tables/app_counter/ac_increase_counter.sql) этой функции.
+[Source code](https://github.com/oresdev/tbcc_postgresql_schemas/tree/master/schemas/v3/tables/app_counter/ac_increase_value.sql) этой функции.
 
 Ожидаем:
 
