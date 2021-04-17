@@ -18,7 +18,7 @@ $function$
 ;
 
 --Проверяем
--- SELECT v3.get_app_config();
+-- SELECT v3.ac_get_config();
 
 /* Результат
 {"config_group":"app","value":{"key": "value"}}
