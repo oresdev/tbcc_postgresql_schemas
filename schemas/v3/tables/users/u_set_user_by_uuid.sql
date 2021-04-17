@@ -1,4 +1,4 @@
-DROP FUNCTION IF EXISTS v3.u_set_user_by_uuid;
+DROP FUNCTION IF EXISTS v3.u_set_user_by_uuid (user_id UUID, useraddress TEXT[], accounttype TEXT, smartcard BOOLEAN);
 CREATE OR REPLACE FUNCTION v3.u_set_user_by_uuid (user_id UUID, useraddress TEXT[], accounttype TEXT, smartcard BOOLEAN)
   RETURNS JSON
   LANGUAGE SQL
@@ -16,7 +16,7 @@ $function$
   WHERE
     u.id = u_set_user_by_uuid.user_id
   RETURNING
-    row_to_json(u);
+    to_json(u.id);
   
 $function$
 ;
@@ -30,7 +30,7 @@ $function$
 -- );
 
 /* Результат
-{"id":"89b80bce-a510-414b-8b0b-8c3bfdda23c3","useraddress":["qwer","ty"],"accounttype":"Pro","smartcard":false}
+"89b80bce-a510-414b-8b0b-8c3bfdda23c3"
 */
 
 --Проверяем: Несуществующий пользователь
