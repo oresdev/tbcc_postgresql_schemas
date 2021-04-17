@@ -1,5 +1,5 @@
-DROP FUNCTION IF EXISTS v3.u_get_user_by_uuid;
-CREATE OR REPLACE FUNCTION v3.u_get_user_by_uuid (user_id UUID)
+DROP FUNCTION IF EXISTS v3.u_get_user_by_uuid(user_id UUID);
+CREATE OR REPLACE FUNCTION v3.u_get_user_by_uuid(user_id UUID)
   RETURNS JSON
   LANGUAGE SQL
   STABLE
