@@ -32,5 +32,10 @@
 Возвращаем:
 
 ```json
-200
+{
+  "config_group": "string",
+  "value": {
+    "key": "string"
+  }
+}
 ```
